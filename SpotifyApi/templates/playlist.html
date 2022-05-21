@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!--    <link rel="stylesheet" type="text/css" href="static/stylesheet.css" />-->
+    <link href="{{ url_for('static', filename='stylesheet.css') }}" rel=stylesheet />
+    <title>playlist</title>
+<!--    <style>-->
+<!--        background-color: rgb(190, 50, 150);-->
+<!--    </style>-->
+</head>
+<body align="center">
+
+    {% if mood %}
+    <h1 class="h1playlist">{{ mood }}</h1>
+    <div>
+    <h2 class="des">Playlist Description:</h2>
+    {% else %}
+    <p> nothing was sent! </p>
+    {% endif %}
+    <h1 class="h1playlistdes"> {{ description }} </h1>
+        </div>
+    <div id="songs">
+    {% for track in playlisttracks['items'] %}
+           <iframe src = "https://open.spotify.com/embed/track/{{ track['track']['id'] }}" frameborder="90" allowtransparency="true" allow="encrypted-media"></iframe>
+    {% endfor %}
+
+        </div>
+     <div id="button">
+            <a class="playlistButton" href="{{ weblink }}">Full Playlist</a>
+        </div>
+
+<!--    {% for track in playlisttracks['items'] %}-->
+<!--           <p> {{ track['track']['name'] }}</p>-->
+<!--    {% endfor %} prints out track name-->
+
+<!--    <p> {{ song }} </p> prints songs name-->
+
+<!--apispotify12.herokuapp.com/-->
+
+    <form id="playlist" action="https://apispotify12.herokuapp.com/playlist" method="POST">
+        <input type = "hidden" name = "mood" value="{{ mood }}">
+    </form>
+
+<!--<script type = "text/javascript">-->
+<!--    function refresh(){-->
+<!--        document.getElementById("playlist").submit();-->
+<!--    }-->
+<!--    setTimeout(refresh, 1000)-->
+<!--</script>-->
+
+</body>
+</html>

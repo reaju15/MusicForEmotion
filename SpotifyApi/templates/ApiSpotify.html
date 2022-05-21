@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="{{ url_for('static', filename='stylesheet.css') }}" rel=stylesheet />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <title>Title</title>
+<!--    <style>-->
+<!--      body {-->
+<!--        margin: 0;-->
+<!--        padding: 0;-->
+<!--        -webkit-background-size: cover;-->
+<!--        -moz-background-size: cover;-->
+<!--        -o-background-size: cover;-->
+<!--        background-size: cover;-->
+<!--        background-repeat: no-repeat;-->
+<!--        align: center;-->
+<!--}-->
+<!--    </style>-->
+</head>
+<body align="center">
+    <div class="title">
+        <div>
+         <h1 class="greeting"> Hello! </h1>
+        <h2>Let the music sync with your mood</h2>
+        </div>
+    </div>
+
+    <div class="buttonEnd">
+        <div>
+        <h3 class="mood">How are you feeling?</h3>
+        <br>
+        <div class="search-box">
+            <form class="form" action="https://apispotify12.herokuapp.com/playlist" method="POST">
+                <input class="search-txt" type="text" name="mood">
+                <button class="search-btn" type="submit" value="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+        </div>
+    </div>
+    <script src = "{{ url_for('static', filename='js/greetings.js')}}"></script>
+</body>
+</html>

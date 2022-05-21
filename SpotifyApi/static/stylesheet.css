@@ -1,0 +1,177 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url("img/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 2080px 1080px;
+    font-family: Helvetica, sans-serif
+}
+
+#songs{
+    width:960px;
+    margin:auto;
+}
+
+.greeting{
+    font-size:72px
+}
+
+h2{
+    font-size:24px;
+    text-transform: uppercase;
+}
+
+.mood{
+    font-size:36px;
+}
+
+.des{
+    color: #a3b6c4
+    font-size: 24px;
+    padding-top: -20px;
+}
+
+p{
+    text-color: black;
+    text-size: 50px;
+    position: relative;
+}
+
+.title{
+    margin-top: 300px;
+    height:400px;
+    display:flex;
+    align-items:center;
+    margin-top: 210px;
+    width:960px;
+    margin:auto;
+    justify-content:center;
+}
+
+
+.table {
+	display: table;   /* Allow the centering to work */
+	margin: 0 auto;
+}
+
+.btn1{
+  border: 1px solid #3498db;
+  background: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: "montserrat";
+  cursor: pointer;
+  margin: 10px;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+  color: #3498db;
+
+}
+#button{
+    height:50px;
+    width:960px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:auto;
+
+}
+
+.playlistButton{
+    color: #CC9999;
+    text-size: 60px;
+    /**position: absolute;
+    top: 73%;
+    left: 50%;
+    transform: translate(-50%, -50%);*/
+    background: #2f3640;
+    height: 20px;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+.h1playlist{
+    text-transform: uppercase;
+    font: 32px;
+    padding-top: -50px;
+}
+
+.h1playlistdes{
+    font-size: 24px;
+}
+
+
+.playlistButton:hover{
+    color: #FFCCCC;
+    text-size: 30px;
+}
+
+a{
+    text-decoration: none;
+}
+.table{
+    display: grid;
+}
+
+
+.tracks{
+    margin-left: 30px;
+}
+
+h1{
+    color: black;
+    text-size: 24px;
+}
+
+.search-box {
+    /**position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);*/
+    align-items: center;
+    width:300px;
+    background: #2f3640;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+.buttonEnd{
+    width:960px;
+    margin:auto;
+    display:flex;
+    justify-content:center;
+}
+
+.search-box:hover > search-txt{
+    width: 240px;
+    padding: 0 6px;
+}
+.search-box:hover > search-btn{
+    background: white;
+}
+.search-btn{
+    color: #e84118;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 240px;
+}
